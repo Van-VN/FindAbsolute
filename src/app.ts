@@ -1,5 +1,10 @@
-export class Calculator {
-  public static add(x: number, y: number): number {
-    return x + y;
+export class AbsoluteNumberCalculator {
+  public static findAbsolute(num: number): number {
+      //throw new Error("Unsupported Operation Exception");
+      //return 0;
+
+      if(num < 0)
+          return  -num;
+      return num;
   }
 }

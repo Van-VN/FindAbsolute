@@ -1,12 +1,28 @@
-import { Calculator } from "../app";
+import {AbsoluteNumberCalculator} from "../app";
 
-describe("add function", () => {
-  test("add two number", () => {
-    const number1 = 1;
-    const number2 = 2;
+describe("testFindAbsolute0", () => {
+    test("testFindAbsolute0", () => {
+        let number = 0;
+        let expected = 0;
 
-    const result = 3;
+        expect(AbsoluteNumberCalculator.findAbsolute(number)).toEqual(expected);
+    });
+});
 
-    expect(Calculator.add(number1, number2)).toBe(result);
-  });
+describe("testFindAbsolute1", () => {
+    test("testFindAbsolute1", () => {
+        let number = 1;
+        let expected = 1;
+
+        expect(AbsoluteNumberCalculator.findAbsolute(number)).toEqual(expected);
+    });
+});
+
+describe("testFindAbsoluteNegative1", () => {
+    test("testFindAbsoluteNegative1", () => {
+        let number = -1;
+        let expected = 1;
+
+        expect(AbsoluteNumberCalculator.findAbsolute(number)).toEqual(expected);
+    });
 });
